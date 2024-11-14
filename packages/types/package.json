@@ -1,0 +1,13 @@
+{
+  "name": "@packages/types",
+  "version": "1.0.0",
+  "description": "Types to be shared across both client and server",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "types": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}

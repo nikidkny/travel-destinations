@@ -1,0 +1,80 @@
+<div
+  id="modal"
+  class="fixed inset-0 bg-gray-800 bg-opacity-50 z-[51] flex items-center justify-center hidden"
+>
+  <!-- Modal Content (Fixed Size) -->
+  <div
+    id="modalContent"
+    class="bg-[#242424] text-white p-10 min-w-fit w-1/2 h-2/3 flex flex-col justify-between"
+  >
+    <div class="flex justify-between items-start mb-6">
+      <!-- Title (either LOGIN or SIGN UP) -->
+      <h2 id="modalTitle" class="text-3xl font-bold mx-auto">LOGIN</h2>
+      <!-- Close Button (X) -->
+      <button id="closeModal" class="text-gray-500 hover:text-gray-300 text-2xl">&times;</button>
+    </div>
+
+    <!-- Input Fields Container (Scrollable if content exceeds) -->
+    <div class="flex-grow overflow-auto">
+      <!-- Username -->
+      <div class="mb-4">
+        <label for="username" class="block text-sm mb-2">Username</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="username"
+          class="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none py-2 px-2"
+        />
+        <p id="usernameError" class="text-red-500 text-sm mt-1 hidden">
+          Username must be at least 4 characters and can include letters, numbers, ., _, -
+        </p>
+      </div>
+
+      <!-- Name field (only for Sign Up) -->
+      <div id="nameField" class="mb-4 hidden">
+        <label for="name" class="block text-sm mb-2">Name</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="name"
+          class="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none py-2 px-2"
+        />
+        <p id="nameError" class="text-red-500 text-sm mt-1 hidden">
+          Name must start with a capital letter and contain at least 3 characters.
+        </p>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-6">
+        <label for="password" class="block text-sm mb-2">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="******"
+          class="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none py-2 px-2"
+        />
+        <p id="passwordError" class="text-red-500 text-sm mt-1 hidden">
+          Password must be at least 6 characters, include one uppercase letter and one number.
+        </p>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="flex justify-center mt-4">
+      <button
+        id="loginBtn"
+        class="min-w-fit px-10 py-2 bg-[#2F8446] text-white w-1/3 uppercase disabled:opacity-50"
+      >
+        Login
+      </button>
+    </div>
+
+    <!-- Toggle between Login and Sign Up -->
+    <div class="mt-4 text-center">
+      <p id="toggleText" class="text-sm text-white">
+        DON’T HAVE AN ACCOUNT?
+        <a id="toggleForm" href="#" class="underline"><span>SIGN UP HERE</span></a>
+      </p>
+    </div>
+  </div>
+</div>
